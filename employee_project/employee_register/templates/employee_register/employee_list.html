@@ -4,12 +4,12 @@
 {% block content %}
 <table class="table table-borderless">
     <thead class="border-bottom font-weight-bold">
-        <tr>
-            <td>Full Name</td>
-            <td>Mobile</td>
-            <td>Position</td>
-            <td>
-                <a href="{% url 'employee_insert' %}" class="btn btn-outline-success">
+        <tr  class="fw-bold">
+            <td class="align-middle">Full Name</td>
+            <td class="align-middle">Mobile</td>
+            <td class="align-middle">Position</td>
+            <td class="align-middle">
+                <a href="{% url 'employee_insert' %}" class="btn btn-outline-primary btn-sm">
                     <i class="fas fa-plus"></i> Add New
                 </a>
             </td>
@@ -18,11 +18,11 @@
     <tbody>
         {% for employee in employee_list %}
             <tr>
-                <td>{{employee.fullname}}</td>
-                <td>{{employee.mobile}}</td>
-                <td>{{employee.position}}</td>
+                <td class="align-middle">{{employee.fullname}}</td>
+                <td class="align-middle">{{employee.mobile}}</td>
+                <td class="align-middle">{{employee.position}}</td>
                 <td>
-                    <a href="{% url 'employee_update' employee.id %}" class="btn text-secondary px-0">
+                    <a href="{% url 'employee_update' employee.id %}" class="btn text-secondary px-0 ">
                         <i class="far fa-edit fa-lg"></i>
                     </a>
                     <form action="{% url 'employee_delete' employee.id %}" method="post" class="d-inline">
