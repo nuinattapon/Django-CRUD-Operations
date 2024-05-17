@@ -2,14 +2,14 @@
 
 
 {% block content %}
-<table class="table table-borderless">
+<table class="table table-border">
     <thead class="border-bottom font-weight-bold">
-        <tr  class="fw-bold">
-            <td class="align-middle">Full Name</td>
-            <td class="align-middle">Mobile</td>
-            <td class="align-middle">Position</td>
-            <td class="align-middle">
-                <a href="{% url 'employee_insert' %}" class="btn btn-outline-primary btn-sm">
+        <tr  class="fw-bold align-middle">
+            <td class="col-4">Full Name</td>
+            <td class="col-2">Mobile</td>
+            <td class="col-4">Position</td>
+            <td class="col-2">
+                <a href="{% url 'employee_insert' %}" class="btn btn-outline-success btn-sm">
                     <i class="fas fa-plus"></i> Add New
                 </a>
             </td>
