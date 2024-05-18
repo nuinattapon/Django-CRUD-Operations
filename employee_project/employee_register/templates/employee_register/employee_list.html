@@ -2,7 +2,7 @@
 
 
 {% block content %}
-<table class="table table-border">
+<table class="table table-borderless">
     <thead class="border-bottom font-weight-bold">
         <tr  class="fw-bold align-middle">
             <td class="col-4">Full Name</td>
@@ -10,7 +10,7 @@
             <td class="col-4">Position</td>
             <td class="col-2">
                 <a href="{% url 'employee_insert' %}" class="btn btn-outline-success btn-sm">
-                    <i class="fas fa-plus"></i> Add New
+                    <i class="bi bi-plus-lg"></i> Add New
                 </a>
             </td>
         </tr>
@@ -22,13 +22,14 @@
                 <td class="align-middle">{{employee.mobile}}</td>
                 <td class="align-middle">{{employee.position}}</td>
                 <td>
-                    <a href="{% url 'employee_update' employee.id %}" class="btn text-secondary px-0 ">
-                        <i class="far fa-edit fa-lg"></i>
+                    <a href="{% url 'employee_update' employee.id %}" class="btn text-secondary px-0 btn-lg">
+                        <i class="bi bi-pencil-square text-primary"></i>
                     </a>
                     <form action="{% url 'employee_delete' employee.id %}" method="post" class="d-inline">
                         {% csrf_token %}
-                        <button type="submit" class="btn">
-                            <i class="far fa-trash-alt fa-lg text-danger float-right"></i>
+                        <button type="submit" class="btn text-danger btn-lg">
+                            <i class="bi bi-trash3"></i>
+
                         </button>
                     </form>
                 </td>

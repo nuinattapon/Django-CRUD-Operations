@@ -13,5 +13,5 @@ class PositionAdmin(admin.ModelAdmin):
 
 @admin.register(Employee)
 class EmployeeAdmin(admin.ModelAdmin):
-    list_display = ['fullname', 'position']
+    list_display = ['fullname', 'emp_code', 'mobile', 'position']
     readonly_fields = ['created_at', 'updated_at']
